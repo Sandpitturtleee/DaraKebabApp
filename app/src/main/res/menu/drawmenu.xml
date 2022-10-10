@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu"
+        android:title="Menu"
+        android:actionMenuTextColor="@android:color/holo_green_light"/>
+    <item
+        android:id="@+id/galeria"
+        android:title="Galeria" />
+    <item
+        android:id="@+id/mapa"
+        android:title="Kontakt"/>
+
+    <item
+        android:id="@+id/kontakt"
+        android:title="Mapa" />
+
+</menu>

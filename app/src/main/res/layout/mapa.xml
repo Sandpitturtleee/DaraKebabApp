@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".o_nas">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TV_TextViewKontakt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/kontakt"
+                android:textColor="#000000"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/TV_TextViewKontakt2"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:letterSpacing="@dimen/material_emphasis_disabled_background"
+                android:lineSpacingExtra="4sp"
+                android:text="@string/kontaktText"
+                android:textColor="#393636" />
+
+            <TextView
+                android:id="@+id/TV_TextViewKontakt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/string"
+                android:textColor="#FF5722"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="345dp">
+
+            <EditText
+                android:id="@+id/ET_EditTextKontakt1"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/imi_i_nazwisko"
+                android:textColorHighlight="#FF5722"
+                android:textColorLink="#FF5722"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.053" />
+
+            <EditText
+                android:id="@+id/ET_EditTextKontakt2"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/email1"
+                android:textColorHighlight="#FF5722"
+                android:textColorLink="#FF5722"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.203" />
+
+            <EditText
+                android:id="@+id/ET_EditTextKontakt3"
+                android:layout_width="fill_parent"
+                android:layout_height="175dp"
+                android:gravity="top|left"
+                android:inputType="textEmailAddress|textMultiLine"
+                android:lines="20"
+                android:maxLines="6"
+                android:minLines="5"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:textColorHighlight="#FF5722"
+                android:textColorLink="#FF5722"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.623" />
+
+            <Button
+                android:id="@+id/BT_ButtonKontakt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/BT_ButtonKontakt1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.983"
+                android:backgroundTint="#FF5722"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/black"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TV_TextViewGaleria4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="@string/odwied_nasz_profil"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/IB_ImageButtonGaleria1"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fblogo"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/TV_TextViewGaleria5"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/kontakt"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TV_TextViewGaleria7"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/cardview_default_elevation"
+                android:lineSpacingExtra="1sp"
+                android:text="@string/adres"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/TV_TextViewGaleria6"
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/email"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
