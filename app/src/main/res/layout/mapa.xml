@@ -85,8 +85,8 @@
 
             <EditText
                 android:id="@+id/ET_EditTextKontakt3"
-                android:layout_width="fill_parent"
-                android:layout_height="175dp"
+                android:layout_width="338dp"
+                android:layout_height="161dp"
                 android:gravity="top|left"
                 android:inputType="textEmailAddress|textMultiLine"
                 android:lines="20"
@@ -94,14 +94,15 @@
                 android:minLines="5"
                 android:scrollbars="vertical"
                 android:scrollHorizontally="false"
+                android:text="..."
                 android:textColorHighlight="#FF5722"
                 android:textColorLink="#FF5722"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.493"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.623" />
+                app:layout_constraintVertical_bias="0.635" />
 
             <Button
                 android:id="@+id/BT_ButtonKontakt1"
