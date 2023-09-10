@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.text.SpannableString;
@@ -23,14 +24,24 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class menu extends Fragment{
 
-    int flag1;
-    int flag2;
-    int flag3;
-    int flag4;
+    int flag1,flag2,flag3,flag4;
+
+    int kurczakMini,wolowinaMini,mieszanyMini;
+    int kurczakStudencki,wolowinaStudencki,mieszanyStudencki;
+    int kurczakDarollo,wolowinaDarollo,mieszanyDarollo;
+    int kurczakDoner,wolowinaDoner,mieszanyDoner;
+    FirebaseFirestore firestore;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -41,7 +52,9 @@ public class menu extends Fragment{
         /** section1  **/
         Button down1 = (Button) view.findViewById(R.id.removeBtn1);
         Button up1 = (Button) view.findViewById(R.id.addBtn1);
+        Button cart1 = (Button) view.findViewById(R.id.button1);
         TextView textView1 = (TextView) view.findViewById(R.id.itemQuanEt1);
+
         up1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,20 +83,36 @@ public class menu extends Fragment{
 
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id)
             {
-                String text = parentView.getItemAtPosition(position).toString();
-                text += " ";
-                text += String.valueOf(flag1);
-                Toast.makeText(parentView.getContext(),text,Toast.LENGTH_SHORT).show();
+
             }
 
             public void onNothingSelected(AdapterView<?> parentView)
             {
 
             }
+
+        });
+        cart1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String text = spinner1.getSelectedItem().toString();
+                if (text.equals("Kurczak")) {
+                    kurczakMini +=flag1;
+                } else if (text.equals("Wołowina")) {
+                    wolowinaMini +=flag1;
+                } else {
+                    mieszanyMini +=flag1;
+                }
+                text += String.valueOf(kurczakMini);
+                Toast.makeText(view.getContext(),"Dodano do koszyka",Toast.LENGTH_SHORT).show();
+                flag1 =0;
+                textView1.setText("0");
+            }
         });
         /** section2  **/
         Button down2 = (Button) view.findViewById(R.id.removeBtn2);
         Button up2 = (Button) view.findViewById(R.id.addBtn2);
+        Button cart2 = (Button) view.findViewById(R.id.button2);
         TextView textView2 = (TextView) view.findViewById(R.id.itemQuanEt2);
         up2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,10 +142,7 @@ public class menu extends Fragment{
 
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id)
             {
-                String text = parentView.getItemAtPosition(position).toString();
-                text += " ";
-                text += String.valueOf(flag2);
-                Toast.makeText(parentView.getContext(),text,Toast.LENGTH_SHORT).show();
+
             }
 
             public void onNothingSelected(AdapterView<?> parentView)
@@ -124,9 +150,27 @@ public class menu extends Fragment{
 
             }
         });
+        cart2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String text = spinner2.getSelectedItem().toString();
+                if (text.equals("Kurczak")) {
+                   kurczakStudencki +=flag2;
+                } else if (text.equals("Wołowina")) {
+                    wolowinaStudencki +=flag2;
+                } else {
+                    mieszanyStudencki +=flag2;
+                }
+                text += String.valueOf(kurczakStudencki);
+                Toast.makeText(view.getContext(),"Dodano do koszyka",Toast.LENGTH_SHORT).show();
+                flag2 =0;
+                textView2.setText("0");
+            }
+        });
         /** section3  **/
         Button down3 = (Button) view.findViewById(R.id.removeBtn3);
         Button up3 = (Button) view.findViewById(R.id.addBtn3);
+        Button cart3 = (Button) view.findViewById(R.id.button3);
         TextView textView3 = (TextView) view.findViewById(R.id.itemQuanEt3);
         up3.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,20 +200,36 @@ public class menu extends Fragment{
 
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id)
             {
-                String text = parentView.getItemAtPosition(position).toString();
-                text += " ";
-                text += String.valueOf(flag3);
-                Toast.makeText(parentView.getContext(),text,Toast.LENGTH_SHORT).show();
+
             }
 
             public void onNothingSelected(AdapterView<?> parentView)
             {
 
             }
+
+        });
+        cart3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String text = spinner3.getSelectedItem().toString();
+                if (text.equals("Kurczak")) {
+                    kurczakDarollo +=flag3;
+                } else if (text.equals("Wołowina")) {
+                    wolowinaDarollo +=flag3;
+                } else {
+                    mieszanyDarollo +=flag3;
+                }
+                text += String.valueOf(kurczakDarollo);
+                Toast.makeText(view.getContext(),"Dodano do koszyka",Toast.LENGTH_SHORT).show();
+                flag3 =0;
+                textView3.setText("0");
+            }
         });
         /** section4  **/
         Button down4 = (Button) view.findViewById(R.id.removeBtn);
         Button up4 = (Button) view.findViewById(R.id.addBtn);
+        Button cart4 = (Button) view.findViewById(R.id.button4);
         TextView textView4 = (TextView) view.findViewById(R.id.itemQuanEt);
         up4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -199,15 +259,77 @@ public class menu extends Fragment{
 
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id)
             {
-                String text = parentView.getItemAtPosition(position).toString();
-                text += " ";
-                text += String.valueOf(flag4);
-                Toast.makeText(parentView.getContext(),text,Toast.LENGTH_SHORT).show();
+
             }
 
             public void onNothingSelected(AdapterView<?> parentView)
             {
 
+            }
+        });
+        cart4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String text = spinner4.getSelectedItem().toString();
+                if (text.equals("Kurczak")) {
+                    kurczakDoner +=flag4;
+                } else if (text.equals("Wołowina")) {
+                    wolowinaDoner +=flag4;
+                } else {
+                    mieszanyDoner +=flag4;
+                }
+                text += String.valueOf(kurczakDoner);
+                Toast.makeText(view.getContext(),"Dodano do koszyka",Toast.LENGTH_SHORT).show();
+                flag4 =0;
+                textView4.setText("0");
+            }
+        });
+
+
+        Button buy = (Button) view.findViewById(R.id.buttonBuy);
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firestore = FirebaseFirestore.getInstance();
+
+                Map<String,Object> orders = new HashMap<>();
+                orders.put("kurczakMini",kurczakMini);
+                orders.put("wolowinaMini",wolowinaMini);
+                orders.put("mieszanyMini",mieszanyMini);
+                orders.put("kurczakStudencki",kurczakStudencki);
+                orders.put("wolowinaStudencki",wolowinaStudencki);
+                orders.put("mieszanyStudencki",mieszanyStudencki);
+                orders.put("kurczakDarollo",kurczakDarollo);
+                orders.put("wolowinaDarollo",wolowinaDarollo);
+                orders.put("mieszanyDarollo",mieszanyDarollo);
+                orders.put("kurczakDoner",kurczakDoner);
+                orders.put("wolowinaDoner",wolowinaDoner);
+                orders.put("mieszanyDoner",mieszanyDoner);
+
+
+                firestore.collection("orders").add(orders).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Toast.makeText(view.getContext(),"Dziękujemy za zamówienie",Toast.LENGTH_SHORT).show();
+                        kurczakMini = 0;
+                        wolowinaMini = 0;
+                        mieszanyMini = 0;
+                        kurczakStudencki = 0;
+                        wolowinaStudencki = 0;
+                        mieszanyStudencki =0;
+                        kurczakDarollo = 0;
+                        wolowinaDarollo = 0;
+                        mieszanyDarollo = 0;
+                        kurczakDoner = 0;
+                        wolowinaDoner = 0;
+                        mieszanyDoner = 0;
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                    }
+                });
             }
         });
 
