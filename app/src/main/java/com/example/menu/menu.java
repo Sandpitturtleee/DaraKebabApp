@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.text.SpannableString;
@@ -24,14 +25,20 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Executor;
 
 public class menu extends Fragment{
 
@@ -41,6 +48,7 @@ public class menu extends Fragment{
     int kurczakStudencki,wolowinaStudencki,mieszanyStudencki;
     int kurczakDarollo,wolowinaDarollo,mieszanyDarollo;
     int kurczakDoner,wolowinaDoner,mieszanyDoner;
+
     FirebaseFirestore firestore;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,6 +56,27 @@ public class menu extends Fragment{
         View view = inflater.inflate(R.layout.menu, container, false);
 
         Context context = getContext();
+
+        TextView miniPrices = (TextView) view.findViewById(R.id.TV_TextViewMenu6);
+        TextView studenckiPrices = (TextView) view.findViewById(R.id.TV_TextViewMenu9);
+        TextView darolloPrices = (TextView) view.findViewById(R.id.TV_TextViewMenu13);
+        TextView donerPrices = (TextView) view.findViewById(R.id.TV_TextViewMenu16);
+
+        firestore = FirebaseFirestore.getInstance();
+
+        DocumentReference documentReference = firestore.collection("prices").document("gN2KLecK26aRil5J8FSe");
+        documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                DocumentSnapshot documentSnapshot = task.getResult();
+                miniPrices.setText(documentSnapshot.getString("mini"));
+                studenckiPrices.setText(documentSnapshot.getString("studencki"));
+                darolloPrices.setText(documentSnapshot.getString("darollo"));
+                donerPrices.setText(documentSnapshot.getString("doner"));
+            }
+        });
+
+
 
         /** section1  **/
         Button down1 = (Button) view.findViewById(R.id.removeBtn1);

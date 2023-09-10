@@ -15,10 +15,10 @@
     <string name="email">kontakt@darakebab.pl</string>
     <string name="menu">Menu</string>
     <string name="menuText">Przed złożeniem zamówienia sprawdź czy \ndowozimy jedzenie w twojej okolicy</string>
-    <string name="TV_TextViewMenu6">Kurczak/11.00 PLN   Wołowina/12.00 PLN \n Mieszane/12.00 PLN</string>
-    <string name="TV_TextViewMenu7">Kurczak/16.00 PLN   Wołowina/17.00 PLN \n Mieszane/17.00 PLN</string>
-    <string name="TV_TextViewMenu8">Kurczak/16.00 PLN   Wołowina/17.00 PLN \n Mieszane/17.00 PLN</string>
-    <string name="TV_TextViewMenu9">Kurczak/22.00 PLN   Wołowina/23.00 PLN \n Mieszane/23.00 PLN</string>
+    <string name="TV_TextViewMenu6"></string>
+    <string name="TV_TextViewMenu9"></string>
+    <string name="TV_TextViewMenu13"></string>
+    <string name="TV_TextViewMenu16"></string>
     <string name="kontaktText">Podaj swoje dane a następnie wypełnij formularz jeśli chcesz się z nami skontaktować</string>
     <string name="BT_ButtonKontakt1">Wyślij formularz</string>
     <string name="kup">Dodaj</string>
