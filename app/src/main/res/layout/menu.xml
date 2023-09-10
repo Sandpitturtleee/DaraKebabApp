@@ -87,7 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp">
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/removeBtn1"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -100,7 +100,8 @@
                         app:layout_constraintHorizontal_bias="0.137"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.363" />
+                        app:layout_constraintVertical_bias="0.363"
+                        android:src="@drawable/remove" />
 
                     <EditText
                         android:id="@+id/itemQuanEt1"
@@ -121,7 +122,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.392" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/addBtn1"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -133,7 +134,8 @@
                         app:layout_constraintHorizontal_bias="0.859"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.363" />
+                        app:layout_constraintVertical_bias="0.363"
+                        android:src="@drawable/add"/>
 
                     <Spinner
                         android:id="@+id/spinner1"
@@ -213,7 +215,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp">
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/removeBtn2"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -225,7 +227,8 @@
                         app:layout_constraintHorizontal_bias="0.137"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.363" />
+                        app:layout_constraintVertical_bias="0.363"
+                        android:src="@drawable/remove"/>
 
                     <EditText
                         android:id="@+id/itemQuanEt2"
@@ -246,7 +249,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.392" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/addBtn2"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -258,7 +261,8 @@
                         app:layout_constraintHorizontal_bias="0.859"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.363" />
+                        app:layout_constraintVertical_bias="0.363"
+                        android:src="@drawable/add"/>
 
                     <Spinner
                         android:id="@+id/spinner2"
@@ -354,7 +358,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp">
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/removeBtn3"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -366,7 +370,8 @@
                         app:layout_constraintHorizontal_bias="0.137"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.363" />
+                        app:layout_constraintVertical_bias="0.363"
+                        android:src="@drawable/remove"/>
 
                     <EditText
                         android:id="@+id/itemQuanEt3"
@@ -387,7 +392,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.392" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/addBtn3"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -399,7 +404,8 @@
                         app:layout_constraintHorizontal_bias="0.859"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.363" />
+                        app:layout_constraintVertical_bias="0.363"
+                        android:src="@drawable/add"/>
 
                     <Spinner
                         android:id="@+id/spinner3"
@@ -479,7 +485,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp">
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/removeBtn"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -491,7 +497,8 @@
                         app:layout_constraintHorizontal_bias="0.137"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.363" />
+                        app:layout_constraintVertical_bias="0.363"
+                        android:src="@drawable/remove"/>
 
                     <EditText
                         android:id="@+id/itemQuanEt"
@@ -512,7 +519,7 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.392" />
 
-                    <Button
+                    <ImageButton
                         android:id="@+id/addBtn"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
@@ -524,7 +531,8 @@
                         app:layout_constraintHorizontal_bias="0.859"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.363" />
+                        app:layout_constraintVertical_bias="0.363"
+                        android:src="@drawable/add"/>
 
                     <Spinner
                         android:id="@+id/spinner"

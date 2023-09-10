@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -79,8 +80,8 @@ public class menu extends Fragment{
 
 
         /** section1  **/
-        Button down1 = (Button) view.findViewById(R.id.removeBtn1);
-        Button up1 = (Button) view.findViewById(R.id.addBtn1);
+        ImageButton down1 = (ImageButton)  view.findViewById(R.id.removeBtn1);
+        ImageButton up1 = (ImageButton) view.findViewById(R.id.addBtn1);
         Button cart1 = (Button) view.findViewById(R.id.button1);
         TextView textView1 = (TextView) view.findViewById(R.id.itemQuanEt1);
 
@@ -139,8 +140,8 @@ public class menu extends Fragment{
             }
         });
         /** section2  **/
-        Button down2 = (Button) view.findViewById(R.id.removeBtn2);
-        Button up2 = (Button) view.findViewById(R.id.addBtn2);
+        ImageButton down2 = (ImageButton) view.findViewById(R.id.removeBtn2);
+        ImageButton up2 = (ImageButton) view.findViewById(R.id.addBtn2);
         Button cart2 = (Button) view.findViewById(R.id.button2);
         TextView textView2 = (TextView) view.findViewById(R.id.itemQuanEt2);
         up2.setOnClickListener(new View.OnClickListener() {
@@ -197,8 +198,8 @@ public class menu extends Fragment{
             }
         });
         /** section3  **/
-        Button down3 = (Button) view.findViewById(R.id.removeBtn3);
-        Button up3 = (Button) view.findViewById(R.id.addBtn3);
+        ImageButton down3 = (ImageButton) view.findViewById(R.id.removeBtn3);
+        ImageButton up3 = (ImageButton) view.findViewById(R.id.addBtn3);
         Button cart3 = (Button) view.findViewById(R.id.button3);
         TextView textView3 = (TextView) view.findViewById(R.id.itemQuanEt3);
         up3.setOnClickListener(new View.OnClickListener() {
@@ -256,8 +257,8 @@ public class menu extends Fragment{
             }
         });
         /** section4  **/
-        Button down4 = (Button) view.findViewById(R.id.removeBtn);
-        Button up4 = (Button) view.findViewById(R.id.addBtn);
+        ImageButton down4 = (ImageButton) view.findViewById(R.id.removeBtn);
+        ImageButton up4 = (ImageButton) view.findViewById(R.id.addBtn);
         Button cart4 = (Button) view.findViewById(R.id.button4);
         TextView textView4 = (TextView) view.findViewById(R.id.itemQuanEt);
         up4.setOnClickListener(new View.OnClickListener() {
