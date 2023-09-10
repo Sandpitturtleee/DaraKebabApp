@@ -21,23 +21,39 @@
     <string name="TV_TextViewMenu9">Kurczak/22.00 PLN   Wołowina/23.00 PLN \n Mieszane/23.00 PLN</string>
     <string name="kontaktText">Podaj swoje dane a następnie wypełnij formularz jeśli chcesz się z nami skontaktować</string>
     <string name="BT_ButtonKontakt1">Wyślij formularz</string>
-    <string name="kup">Kup</string>
-    <string name="kup1">Kup</string>
+    <string name="kup">Dodaj</string>
+    <string name="kup1">Dodaj</string>
     <string name="_1_darollo">1. DAROLLO</string>
-    <string name="_1">1</string>
+    <string name="_1">0</string>
     <string name="kebab_w_cie_cie">Kebab w cieście</string>
     <string name="_2_doner_darollo">2. DONER DAROLLO</string>
     <string name="wrapy">Wrapy</string>
     <string name="_2_studencki_w_cie_cie">2. STUDENCKI W CIEŚCIE</string>
-    <string name="_1_1">1</string>
-    <string name="kup2">Kup</string>
+    <string name="_1_1">0</string>
+    <string name="kup2">Dodaj</string>
     <string name="_1_mini_w_cie_cie">1. MINI W CIEŚCIE</string>
-    <string name="_1_2">1</string>
-    <string name="_1_3">1</string>
-    <string name="kup_3">Kup</string>
+    <string name="_1_2">0</string>
+    <string name="_1_3">0</string>
+    <string name="kup_3">Dodaj</string>
+    <string name="kup_4">Kup</string>
     <string name="email1">Email</string>
     <string name="imi_i_nazwisko">Imię i Nazwisko</string>
-    <string-array name="kebabs_array">
+    <string-array name="kebabs_mini">
+        <item>Kurczak</item>
+        <item>Wołowina</item>
+        <item>Mieszany</item>
+    </string-array>
+    <string-array name="kebabs_studencki">
+        <item>Kurczak</item>
+        <item>Wołowina</item>
+        <item>Mieszany</item>
+    </string-array>
+    <string-array name="kebabs_darollo">
+        <item>Kurczak</item>
+        <item>Wołowina</item>
+        <item>Mieszany</item>
+    </string-array>
+    <string-array name="kebabs_doner">
         <item>Kurczak</item>
         <item>Wołowina</item>
         <item>Mieszany</item>
